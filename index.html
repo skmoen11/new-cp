@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPA Lead Tracker | Real-time Monitoring</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="logo-container">
+                <h1>CPA<span>LeadTracker</span></h1>
+                <p>Real-time Lead Monitoring Dashboard</p>
+            </div>
+            <div class="header-stats">
+                <div class="stat-box">
+                    <h3>Total Leads</h3>
+                    <p id="total-leads">0</p>
+                </div>
+                <div class="stat-box highlight">
+                    <h3>Today's Leads</h3>
+                    <p id="today-leads">0</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            <section class="recent-leads">
+                <div class="section-header">
+                    <h2><i class="fas fa-bolt"></i> Recent Leads</h2>
+                    <div class="refresh-info">
+                        <span>Auto-refresh in <span id="refresh-countdown">10</span>s</span>
+                        <button id="manual-refresh"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="leads-table">
+                        <thead>
+                            <tr>
+                                <th>Offer ID</th>
+                                <th>Offer Name</th>
+                                <th>Date & Time</th>
+                                <th>Country</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leads-table-body">
+                            <!-- Leads will be inserted here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer class="dashboard-footer">
+            <p>© <span id="current-year"></span> CPA LeadTracker. All rights reserved.</p>
+            <p>Last updated: <span id="last-updated"></span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
